@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Code Eğitim Merkezi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">Claude Code <span class="logo-sub">Eğitim Merkezi</span></span>
+      </div>
+      <nav id="main-nav">
+        <a href="#hakkinda" class="nav-link">Hakkında</a>
+        <a href="#konular" class="nav-link">Konular</a>
+        <a href="#baslangic" class="nav-link">Başlangıç</a>
+        <a href="#iletisim" class="nav-link">İletişim</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#hakkinda" class="mobile-nav-link">Hakkında</a>
+      <a href="#konular" class="mobile-nav-link">Konular</a>
+      <a href="#baslangic" class="mobile-nav-link">Başlangıç</a>
+      <a href="#iletisim" class="mobile-nav-link">İletişim</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">Sıfırdan Öğren</div>
+      <h1>Kodlamayı Bilmeden<br /><span class="gradient-text">Yapay Zeka ile Üret</span></h1>
+      <p class="hero-desc">
+        Claude Code ile terminal tabanlı yapay zeka yardımcısını öğren.
+        Vibe coding dünyasına adım at — fikrin varsa, gerisi Claude'a kalsın.
+      </p>
+      <div class="hero-btns">
+        <a href="#konular" class="btn btn-primary">Öğrenmeye Başla</a>
+        <a href="#nedir" class="btn btn-ghost">Claude Code Nedir?</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>13+</span><small>Ana Konu</small></div>
+        <div class="stat"><span>65+</span><small>Alt Konu</small></div>
+        <div class="stat"><span>100%</span><small>Ücretsiz</small></div>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">terminal</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div class="t-line"><span class="t-prompt">~$</span> <span class="t-cmd typed" id="typedCmd"></span><span class="cursor" id="cursor">▋</span></div>
+        <div class="t-output" id="termOutput"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEDIR -->
+  <section class="section section-alt" id="nedir">
+    <div class="container">
+      <div class="section-header">
+        <h2>Claude Code Nedir?</h2>
+        <p>Terminal üzerinden çalışan, Anthropic tarafından geliştirilen yapay zeka destekli kodlama asistanı.</p>
+      </div>
+      <div class="cards-row">
+        <div class="info-card">
+          <div class="info-icon">🤖</div>
+          <h3>Yapay Zeka Asistanı</h3>
+          <p>Doğal dille komut verirsin, Claude Code kodu yazar, dosyaları düzenler, hataları düzeltir.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">💻</div>
+          <h3>Terminal Tabanlı</h3>
+          <p>Komut satırından çalışır. Kurulum basit, kullanım güçlü. Her işletim sisteminde çalışır.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🎯</div>
+          <h3>Vibe Coding</h3>
+          <p>"Bir alışveriş sitesi yap" dersin, Claude Code tüm dosyaları oluşturur ve çalıştırır.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🔧</div>
+          <h3>Güçlü Araçlar</h3>
+          <p>Dosya okuma, yazma, terminal komutları, web arama ve çok daha fazlasına erişir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONULAR -->
+  <section class="section" id="konular">
+    <div class="container">
+      <div class="section-header">
+        <h2>Eğitim Konuları</h2>
+        <p>Başlıklara tıklayarak alt konuları genişlet ve öğrenmek istediğin konuya git.</p>
+      </div>
+      <div class="accordion" id="accordion"></div>
+    </div>
+  </section>
+
+  <!-- VIBE CODING -->
+  <section class="section section-alt" id="baslangic">
+    <div class="container">
+      <div class="section-header">
+        <h2>Vibe Coding ile Hızlı Başlangıç</h2>
+        <p>Adım adım ilk projenizi oluşturun.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Node.js Kur</h3>
+            <p>nodejs.org adresinden Node.js'i indirip kur. Bu adım Claude Code için zorunludur.</p>
+            <div class="code-block"><code>node --version</code></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Claude Code'u Yükle</h3>
+            <p>Terminal ya da Komut İstemi'ni aç ve aşağıdaki komutu çalıştır.</p>
+            <div class="code-block"><code>npm install -g @anthropic-ai/claude-code</code></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Klasörüne Git</h3>
+            <p>Proje klasörünü oluştur ve o klasöre gir.</p>
+            <div class="code-block"><code>mkdir projem && cd projem</code></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Claude Code'u Başlat</h3>
+            <p>Tek komutla yapay zeka asistanını çalıştır.</p>
+            <div class="code-block"><code>claude</code></div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h3>İlk Komutunu Ver</h3>
+            <p>Doğal Türkçe ile ne yapmak istediğini söyle.</p>
+            <div class="code-block"><code>Basit bir yapılacaklar listesi uygulaması oluştur</code></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IPUCLARI -->
+  <section class="section" id="ipuclari">
+    <div class="container">
+      <div class="section-header">
+        <h2>Altın Kurallar</h2>
+        <p>Claude Code'u daha verimli kullanmak için bu ipuçlarına dikkat et.</p>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card tip-green">
+          <div class="tip-label">✅ YAP</div>
+          <h4>Net ve Detaylı Ol</h4>
+          <p>"Bir web sitesi yap" yerine "Mavi renkli, 3 sayfalı bir portföy web sitesi yap" de.</p>
+        </div>
+        <div class="tip-card tip-red">
+          <div class="tip-label">❌ YAPMA</div>
+          <h4>Çok Kısa Komut Verme</h4>
+          <p>"Düzelt" gibi belirsiz komutlar yerine neyi düzeltmek istediğini açıkla.</p>
+        </div>
+        <div class="tip-card tip-green">
+          <div class="tip-label">✅ YAP</div>
+          <h4>Adım Adım İlerle</h4>
+          <p>Büyük projeleri parçalara böl. Her adımı onayladıktan sonra devam et.</p>
+        </div>
+        <div class="tip-card tip-red">
+          <div class="tip-label">❌ YAPMA</div>
+          <h4>Her Şeyi Tek Seferde İsteme</h4>
+          <p>Çok büyük ve karmaşık istekler Claude'u yanıltabilir. Küçük adımlar daha iyi.</p>
+        </div>
+        <div class="tip-card tip-green">
+          <div class="tip-label">✅ YAP</div>
+          <h4>CLAUDE.md Kullan</h4>
+          <p>Projenin kurallarını ve bağlamını CLAUDE.md dosyasına yaz. Claude her seferinde okur.</p>
+        </div>
+        <div class="tip-card tip-blue">
+          <div class="tip-label">💡 İPUCU</div>
+          <h4>Git ile Güvende Ol</h4>
+          <p>Her değişiklikten önce git commit yap. Claude bir şeyi bozarsa kolayca geri alırsın.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="iletisim">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">⬡</span> Claude Code Eğitim Merkezi
+      </div>
+      <p class="footer-desc">Kodlamayı bilmeyenler için, yapay zeka ile üretmek isteyenler için.</p>
+      <div class="footer-links">
+        <a href="https://claude.ai" target="_blank">Claude.ai</a>
+        <a href="https://docs.anthropic.com" target="_blank">Anthropic Docs</a>
+        <a href="https://github.com/anthropics/claude-code" target="_blank">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2025 Claude Code Eğitim — Eğitim amaçlı hazırlanmıştır.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
