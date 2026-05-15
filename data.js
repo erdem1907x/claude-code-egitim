@@ -1367,5 +1367,29 @@ var topics = [
         }
       }
     ]
+  },
+
+  // ──────────────────────────────────────────────────────────────
+  // 14. CLAUDE'DAN YAYINA YOL HARİTASI
+  // ──────────────────────────────────────────────────────────────
+  {
+    id: 14,
+    icon: "🗺️",
+    title: "Claude'dan Yayına Yol Haritası",
+    desc: "Fikrinizden yayına kadar tüm sürecin görsel haritası — tek bakışta her adım",
+    tag: "beginner",
+    tagLabel: "Başlangıç",
+    subs: [
+      {
+        icon: "🗺️",
+        title: "Tam Yol Haritası Görseli",
+        desc: "Claude ile uygulama geliştirme sürecinin tüm adımları — büyütmek için tıkla",
+        content: {
+          summary: "Aşağıdaki görsel, Claude Code ile fikir aşamasından canlı yayına kadar geçen sürecin tamamını özetlemektedir. Görsele tıklayarak tam ekranda açabilirsin.",
+          image: "images/roadmap.png",
+          imageAlt: "Claude'dan Yayına Yol Haritası"
+        }
+      }
+    ]
   }
 ];

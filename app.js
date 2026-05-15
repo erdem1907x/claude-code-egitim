@@ -289,6 +289,19 @@ function openModal(tIdx, sIdx) {
     body.appendChild(sec);
   }
 
+  // Image
+  if (c.image) {
+    const sec = document.createElement("div");
+    sec.className = "modal-section";
+    const img = document.createElement("img");
+    img.src = c.image;
+    img.alt = c.imageAlt || "";
+    img.style.cssText = "width:100%;border-radius:10px;display:block;cursor:pointer;";
+    img.addEventListener("click", () => window.open(c.image, "_blank"));
+    sec.appendChild(img);
+    body.appendChild(sec);
+  }
+
   // Note
   if (c.note) {
     const sec = document.createElement("div");
@@ -390,7 +403,7 @@ function initReveal() {
 /* ─── Stats counter animation ─── */
 function animateStats() {
   const stats = document.querySelectorAll(".stat span");
-  const values = [13, 65, 100];
+  const values = [14, 65, 100];
   const suffixes = ["+", "+", "%"];
 
   stats.forEach((el, i) => {
