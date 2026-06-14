@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOS Oyunu</title>
+  <link rel="stylesheet" href="sos.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- HEADER -->
+    <header class="game-header">
+      <a href="index.html" class="back-link">← Eğitim Sitesine Dön</a>
+      <h1 class="game-title">SOS <span>Oyunu</span></h1>
+      <div class="header-spacer"></div>
+    </header>
+
+    <!-- SETUP SCREEN -->
+    <div class="screen" id="setupScreen">
+      <div class="setup-card">
+        <div class="setup-logo">S O S</div>
+        <p class="setup-desc">Izgara üzerine S veya O harfi yerleştir. "S-O-S" dizisi oluşturan oyuncu puan kazanır!</p>
+
+        <div class="setup-group">
+          <label class="setup-label">Oyun Modu</label>
+          <div class="mode-btns">
+            <button class="mode-btn active" data-mode="pvp">
+              <span class="mode-icon">👥</span>
+              <span>2 Oyuncu</span>
+            </button>
+            <button class="mode-btn" data-mode="pva">
+              <span class="mode-icon">🤖</span>
+              <span>Yapay Zekaya Karşı</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="setup-group">
+          <label class="setup-label">Izgara Boyutu</label>
+          <div class="size-btns">
+            <button class="size-btn" data-size="4">4×4</button>
+            <button class="size-btn active" data-size="6">6×6</button>
+            <button class="size-btn" data-size="8">8×8</button>
+            <button class="size-btn" data-size="10">10×10</button>
+          </div>
+        </div>
+
+        <div class="setup-group" id="aiDiffGroup">
+          <label class="setup-label">Yapay Zeka Zorluğu</label>
+          <div class="diff-btns">
+            <button class="diff-btn" data-diff="easy">Kolay</button>
+            <button class="diff-btn active" data-diff="medium">Orta</button>
+            <button class="diff-btn" data-diff="hard">Zor</button>
+          </div>
+        </div>
+
+        <button class="start-btn" id="startBtn">Oyunu Başlat</button>
+      </div>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div class="screen hidden" id="gameScreen">
+      <div class="game-layout">
+        <!-- SCORE PANEL -->
+        <div class="score-panel">
+          <div class="player-card" id="p1Card">
+            <div class="player-avatar p1-avatar">P1</div>
+            <div class="player-info">
+              <div class="player-name" id="p1Name">Oyuncu 1</div>
+              <div class="player-score-wrap">
+                <span class="player-score" id="p1Score">0</span>
+                <span class="score-label">SOS</span>
+              </div>
+            </div>
+            <div class="turn-indicator" id="p1Turn"></div>
+          </div>
+
+          <div class="vs-badge">VS</div>
+
+          <div class="player-card" id="p2Card">
+            <div class="player-avatar p2-avatar" id="p2AvatarEl">P2</div>
+            <div class="player-info">
+              <div class="player-name" id="p2Name">Oyuncu 2</div>
+              <div class="player-score-wrap">
+                <span class="player-score" id="p2Score">0</span>
+                <span class="score-label">SOS</span>
+              </div>
+            </div>
+            <div class="turn-indicator" id="p2Turn"></div>
+          </div>
+        </div>
+
+        <!-- STATUS -->
+        <div class="status-bar">
+          <div class="status-text" id="statusText">Oyuncu 1'in sırası</div>
+          <div class="cells-left" id="cellsLeft"></div>
+        </div>
+
+        <!-- LETTER SELECTOR -->
+        <div class="letter-selector">
+          <span class="selector-label">Harf seç:</span>
+          <button class="letter-btn active" id="btnS" data-letter="S">S</button>
+          <button class="letter-btn" id="btnO" data-letter="O">O</button>
+        </div>
+
+        <!-- BOARD -->
+        <div class="board-container">
+          <div class="board" id="board"></div>
+        </div>
+
+        <!-- CONTROLS -->
+        <div class="game-controls">
+          <button class="ctrl-btn" id="undoBtn">↩ Geri Al</button>
+          <button class="ctrl-btn ctrl-danger" id="restartBtn">↺ Yeniden Başla</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div class="screen hidden" id="resultScreen">
+      <div class="result-card">
+        <div class="result-trophy" id="resultTrophy">🏆</div>
+        <h2 class="result-title" id="resultTitle">Oyun Bitti!</h2>
+        <p class="result-subtitle" id="resultSubtitle"></p>
+        <div class="result-scores">
+          <div class="result-player">
+            <span class="result-pname" id="rp1Name">Oyuncu 1</span>
+            <span class="result-pscore" id="rp1Score">0</span>
+            <span class="result-plabel">SOS</span>
+          </div>
+          <div class="result-divider">-</div>
+          <div class="result-player">
+            <span class="result-pname" id="rp2Name">Oyuncu 2</span>
+            <span class="result-pscore" id="rp2Score">0</span>
+            <span class="result-plabel">SOS</span>
+          </div>
+        </div>
+        <div class="result-btns">
+          <button class="result-btn result-btn-primary" id="playAgainBtn">Tekrar Oyna</button>
+          <button class="result-btn" id="newGameBtn">Yeni Ayarlar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="sos.js"></script>
+</body>
+</html>
