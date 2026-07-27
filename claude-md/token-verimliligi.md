@@ -57,15 +57,20 @@ Aynı cümleyi üçüncü kez yazıyorsan:
 - Kalıcı kural → CLAUDE.md.
 - Sürekli izin soruyorsa → `.claude/settings.json` içine allowlist (`/fewer-permission-prompts` bunu senin için yazar).
 
-## 9. Günlük ritim
+## 9. Günlük ritim (masaüstü uygulaması)
 
 ```
-Sabah:  claude → görevi tarif et → /plan → onayla → uygula → test et → commit
-Sonra:  /clear → sonraki görev
-Akşam:  push
+1. Projenin klasörünü aç
+2. Görevi Türkçe tarif et → büyük işse /plan yaz, planı onayla
+3. Claude uygular, komut onayı isterse onayla
+4. Uygulamayı dene → çalışıyorsa "commit et" de
+5. /clear → sıradaki görev
+Gün sonu: "push et"
 ```
 
 Tek oturumda gün boyu çalışma. En sık yapılan ve en pahalı hata bu.
+
+Komutları ben yazmıyorum — `/clear`, `/plan`, `/model` gibi eğik çizgili komutlar sohbet kutusuna yazılır; `npm`, `git`, `cp` gibi terminal komutlarını Claude çalıştırır, ben onaylarım.
 
 ## 10. Kırmızı çizgiler
 

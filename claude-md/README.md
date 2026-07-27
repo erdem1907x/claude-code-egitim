@@ -16,15 +16,21 @@ Nasıl çalışır: global dosya her oturumda yüklenir, proje kökündeki `CLAU
 
 ## Kurulum
 
-```bash
-# bir kere
-mkdir -p ~/.claude && cp claude-md/00-global-CLAUDE.md ~/.claude/CLAUDE.md
+Masaüstü uygulamasından çalışıyorum, komut yazmıyorum. Claude'a söylüyorum, o yapıyor.
 
-# her yeni projede (örnek: SaaS)
-cp claude-md/03-saas-nextjs-supabase-CLAUDE.md ~/projeler/yeni-saas/CLAUDE.md
-```
+**Bir kere** — yeni bir sohbette:
 
-Kopyaladıktan sonra `[köşeli parantez]` içindeki yerleri doldur. Ürün adı ve tek cümlelik tanım yazılmadan bırakılmaz — Claude'un en çok işine yarayan iki satır orası.
+> `claude-md/00-global-CLAUDE.md` dosyasını `~/.claude/CLAUDE.md` olarak kopyala. Klasör yoksa oluştur.
+
+**Her yeni projede** — projenin klasörünü açıp:
+
+> `~/projeler/claude-code-egitim/claude-md/03-saas-nextjs-supabase-CLAUDE.md` dosyasını bu projeye `CLAUDE.md` olarak kopyala. Ürün adı [X], [ne yaptığı]. Köşeli parantezli yerleri doldur.
+
+Godot oyunu için `01-...`, mobil uygulama için `02-...` dosyasını iste.
+
+`[Ürün adı]` ve tek cümlelik tanım boş bırakılmaz — Claude'un en çok işine yarayan iki satır orası.
+
+Şablonların içindeki komut blokları (`npm run dev`, `godot --headless` vb.) **Claude'un** çalıştıracağı komutlar, benim değil. Onay kutusu çıkınca onaylıyorum.
 
 ## Kullanım kuralları
 

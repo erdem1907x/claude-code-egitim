@@ -7,6 +7,8 @@
 
 Vibe coder'ım — kod yazmıyorum, ürün tarif ediyorum. Steam oyunları, iOS/Android uygulamaları ve satılık SaaS ürünleri geliştiriyorum. Teknik terimleri bilirim ama sözdizimini bilmem; kodu ben okumam, sonucu denerim.
 
+**Claude Code'u masaüstü uygulamasından kullanıyorum, terminalden değil.** Terminal komutlarını sen çalıştır, bana "şu komutu çalıştır" deme. Bir komutu ben çalıştıracaksam sebebini söyle.
+
 ## Nasıl konuş
 
 - **Türkçe** konuş. Kod, komut, değişken adı, commit mesajı İngilizce.

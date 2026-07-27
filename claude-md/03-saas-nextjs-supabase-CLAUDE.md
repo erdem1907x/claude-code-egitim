@@ -61,7 +61,7 @@ npm run build             # deploy öncesi ZORUNLU
 stripe listen --forward-to localhost:3000/api/stripe/webhook
 ```
 
-Deploy: `main`'e push → Vercel otomatik. **Prod'a ben merge ederim.**
+Deploy: `main`'e push → Vercel otomatik. **`main`'e merge, ben açıkça söylemeden yapılmaz.**
 
 ## Satışa hazır kontrol listesi
 

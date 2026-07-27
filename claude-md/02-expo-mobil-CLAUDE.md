@@ -50,7 +50,7 @@ npx tsc --noEmit                   # tip kontrolü — her değişiklikten sonra
 npx expo-doctor                    # sürüm uyuşmazlığı
 eas build -p android --profile preview   # test apk
 eas build -p ios --profile preview       # TestFlight öncesi
-eas submit -p ios                        # mağazaya gönderim — BEN yaparım
+eas submit -p ios                        # mağazaya gönderim — ben "gönder" demeden ÇALIŞTIRMA
 ```
 
 Bir şey "çalıştı" demeden önce en az `npx tsc --noEmit` geçmiş olacak.

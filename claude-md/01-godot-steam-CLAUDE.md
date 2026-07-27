@@ -52,7 +52,7 @@ godot --path . --headless --script res://tests/run_tests.gd   # varsa testler
 godot --headless --export-release "Windows Desktop" export/game.exe
 ```
 
-Build alıp Steam'e yüklemeyi (`steamcmd`) **ben yaparım**, sen yapma.
+İlk iki komutu serbestçe çalıştır. Export ve Steam'e yükleme (`steamcmd`) **ben "yükle" demeden çalıştırılmaz**.
 
 ## Yayın öncesi kontrol listesi
 
